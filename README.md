@@ -1,4 +1,5 @@
 # Experiment-7
+
 ## Write a python program for sorting and inspect for failures. 
 ## Algorithm:
 Start the program.
@@ -8,5 +9,33 @@ Start the program.
 5. Print the sorted array
 6. Stop the program. 
 # Program:
+```n = int(input("Enter the number of elements: "))  
+arr = []  
+
+try:  
+    for i in range(n):  
+        a = float(input("Enter the element: "))  
+        arr.append(a)  
+
+    # Bubble sort (corrected)
+    for i in range(n):  
+        for j in range(n - i - 1):  
+            if arr[j] > arr[j + 1]:  # Compare adjacent elements  
+                temp = arr[j]  
+                arr[j] = arr[j + 1]  
+                arr[j + 1] = temp  
+
+    print("The array after sorting: ", end="")  
+    for i in range(n):  
+        print(arr[i], end=" ")  
+
+except ValueError:  
+    print("Enter a valid number")
+```
 # Result
+
+<img width="733" height="62" alt="image" src="https://github.com/user-attachments/assets/23f034d6-4d8d-4fb7-a1e8-bfbb69bf9987" />
+
+
 # Output
+Thus, a program to check sorting has been written and test cases have been written and verified successfully
